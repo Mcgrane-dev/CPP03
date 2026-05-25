@@ -12,13 +12,10 @@ void ClapTrap::attack(const std::string& target)
 		std::cout << "ClapTrap " << _name << " is out of energy!\n";
 		return;
 	}
-	if(_energyPoints > 0)
-	{
-		std::cout << "ClapTrap " << _name 
-				  << " attacks " << target << " causing " 
-				  << _attackDamage << " points of damage!\n";
-		_energyPoints--;
-	}
+	std::cout << "ClapTrap " << _name 
+			  << " attacks " << target << " causing " 
+			  << _attackDamage << " points of damage!\n";
+	_energyPoints--;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
